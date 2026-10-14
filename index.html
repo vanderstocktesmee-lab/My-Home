@@ -7,63 +7,73 @@
     <style>
         body {
             margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
         }
+
         .scene {
             position: relative;
             width: 100%;
         }
+
         .house {
             display: block;
             width: 100%;
             height: auto;
         }
-        .bedroom {
+
+        .room-link {
             position: absolute;
-            left: 6.3%;
-            top: 28.8%;
-            width: 33%;
-            height: 25.2%;
-            box-sizing: border-box;
             display: grid;
             place-items: center;
+            box-sizing: border-box;
             border: 0;
             background: transparent;
             color: white;
             cursor: pointer;
-        }
-    
-        }
-        .bedroom:focus-visible {
-            outline: 3px solid white;
-            outline-offset: -4px;
-        }
-        .gaming-roomUwU:focus-visible {
-            outline: 3px solid white;
-            outline-offset: -4px;
+            text-decoration: none;
+            font-size: clamp(0.9rem, 1vw, 1.4rem);
+            transition: transform 0.2s ease;
         }
 
-        .gaming-roomUwU {
-           position: absolute;
-           left: 61%;
-           top: 29%;
-           width: 33%
-           color: white;
-           height: 25%;
-           display: grid;
-           place-items: center;
-           box-sizing: border-box;
-           text-decoration: none;
-           
-            
+        .room-link:hover {
+            transform: scale(1.05);
+        }
+
+     .living-room {
+    left: 5%;
+    top: 57%;
+    width: 37%;
+    height: 27%;
+}
+
+        .bedroom {
+            left: 6.3%;
+            top: 28.8%;
+            width: 33%;
+            height: 25.2%;
+        }
+
+        .gaming-room {
+            left: 61%;
+            top: 29%;
+            width: 33%;
+            height: 25%;
+        }
+
+        .room-link:focus-visible {
+            outline: 3px solid white;
+            outline-offset: -4px;
         }
     </style>
 </head>
 <body>
     <main class="scene">
-        <img class="house" src="house.png" alt="">
-        <a class="bedroom" href="bedroom.html">Bedroom</a>
-        <a class="gaming-roomUwU" href="gaming-room.html">Gaming Room</a>
+        <img class="house" src="house.png" alt="House floor plan">
+        <a class="room-link living-room" href="living-room.html">Living Room</a>
+        <a class="room-link bedroom" href="bedroom.html">Bedroom</a>
+        <a class="room-link gaming-room" href="gaming-room.html">Gaming Room</a>
+        <a class="room-link" href="garage.html">Garage</a>
     </main>
-
 </body>
 </html>
